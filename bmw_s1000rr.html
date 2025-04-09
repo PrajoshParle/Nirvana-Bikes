@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW S1000RR - NIRVANA BIKES</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background-image: url('bmw_s1000rr_background.jpg');">
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="NIRVANA BIKES Logo">
+        </div>
+        <h1>NIRVANA BIKES</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="showroom.html">Showroom</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="slider">
+            <img src="bmw_s1000rr_slider_1.jpg" alt="BMW S1000RR Slider 1" class="active">
+            <img src="bmw_s1000rr_slider_2.jpg" alt="BMW S1000RR Slider 2">
+            <img src="bmw_s1000rr_slider_3.jpg" alt="BMW S1000RR Slider 3">
+            <img src="bmw_s1000rr_slider_4.jpg" alt="BMW S1000RR Slider 4">
+        </div>
+        <div class="bike-details">
+            <h2>BMW S1000RR</h2>
+            <p>Price: â‚¹23,00,000</p>
+            <p>The BMW S1000RR is a premium sport bike with cutting-edge technology and performance.</p>
+            <div class="specifications">
+                <h3>Specifications</h3>
+                <ul>
+                    <li>Displacement: 999 cc</li>
+                    <li>Max Power: 205 bhp @ 13,500 rpm</li>
+                    <li>Max Torque: 113 Nm @ 11,000 rpm</li>
+                    <li>Top Speed: 306 kmph</li>
+                    <li>Braking System: ABS Pro</li>
+                    <li>Front Brake Type: Disc</li>
+                    <li>Front Brake Size: 320 mm</li>
+                    <li>Front Suspension: Inverted Fork</li>
+                    <li>Rear Suspension: Aluminum Swingarm</li>
+                    <li>Kerb Weight: 197 kg</li>
+                    <li>Seat Height: 824 mm</li>
+                    <li>Ground Clearance: 135 mm</li>
+                    <li>Fuel Tank Capacity: 16.5 liters</li>
+                </ul>
+                <div class="buttons">
+                    <button>Buy Now</button>
+                    <button>Add to Cart</button>
+                </div>
+                <a href="https://www.bmw-motorrad.com" target="_blank">Official Link</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 NIRVANA BIKES. All Rights Reserved.</p>
+    </footer>
+    <script>
+        function startSlider() {
+            const slider = document.querySelector('.slider');
+            const slides = slider.querySelectorAll('img');
+            let index = 0;
+
+            function showNextSlide() {
+                slides[index].classList.remove('active');
+                index = (index + 1) % slides.length;
+                slides[index].classList.add('active');
+            }
+
+            setInterval(showNextSlide, 2000);
+        }
+
+        window.onload = startSlider;
+    </script>
+</body>
+</html>
