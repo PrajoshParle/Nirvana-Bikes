@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suzuki GSX-R1000 - NIRVANA BIKES</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background-image: url('suzuki_gsxr1000_background.jpg');">
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="NIRVANA BIKES Logo">
+        </div>
+        <h1>NIRVANA BIKES</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="showroom.html">Showroom</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="slider">
+            <img src="suzuki_gsxr1000_slider_1.jpg" alt="Suzuki GSX-R1000 Slider 1" class="active">
+            <img src="suzuki_gsxr1000_slider_2.jpg" alt="Suzuki GSX-R1000 Slider 2">
+            <img src="suzuki_gsxr1000_slider_3.jpg" alt="Suzuki GSX-R1000 Slider 3">
+            <img src="suzuki_gsxr1000_slider_4.jpg" alt="Suzuki GSX-R1000 Slider 4">
+        </div>
+        <div class="bike-details">
+            <h2>Suzuki GSX-R1000</h2>
+            <p>Price: â‚¹22,00,000</p>
+            <p>The Suzuki GSX-R1000 is a powerful sport bike with a rich racing heritage.</p>
+            <div class="specifications">
+                <h3>Specifications</h3>
+                <ul>
+                    <li>Displacement: 999 cc</li>
+                    <li>Max Power: 199 bhp @ 13,200 rpm</li>
+                    <li>Max Torque: 117.6 Nm @ 10,800 rpm</li>
+                    <li>Top Speed: 300 kmph</li>
+                    <li>Braking System: ABS</li>
+                    <li>Front Brake Type: Disc</li>
+                    <li>Front Brake Size: 320 mm</li>
+                    <li>Front Suspension: Inverted Fork</li>
+                    <li>Rear Suspension: Link Type</li>
+                    <li>Kerb Weight: 202 kg</li>
+                    <li>Seat Height: 825 mm</li>
+                    <li>Ground Clearance: 130 mm</li>
+                    <li>Fuel Tank Capacity: 16 liters</li>
+                </ul>
+                <div class="buttons">
+                    <button>Buy Now</button>
+                    <button>Add to Cart</button>
+                </div>
+                <a href="https://www.suzuki.com" target="_blank">Official Link</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 NIRVANA BIKES. All Rights Reserved.</p>
+    </footer>
+    <script>
+        function startSlider() {
+            const slider = document.querySelector('.slider');
+            const slides = slider.querySelectorAll('img');
+            let index = 0;
+
+            function showNextSlide() {
+                slides[index].classList.remove('active');
+                index = (index + 1) % slides.length;
+                slides[index].classList.add('active');
+            }
+
+            setInterval(showNextSlide, 2000);
+        }
+
+        window.onload = startSlider;
+    </script>
+</body>
+</html>
