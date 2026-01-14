@@ -5,23 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Honda CBR1000RR - NIRVANA BIKES</title>
     <link rel="stylesheet" href="styles.css">
-    <script>
-        function startSlider() {
-            const slider = document.querySelector('.slider');
-            const slides = slider.querySelectorAll('img');
-            let index = 0;
-
-            function showNextSlide() {
-                slides[index].classList.remove('active');
-                index = (index + 1) % slides.length;
-                slides[index].classList.add('active');
-            }
-
-            setInterval(showNextSlide, 2000);
-        }
-
-        window.onload = startSlider;
-    </script>
 </head>
 <body style="background-image: url('images/honda_cbr1000rr_background.jpg');">
     <header>
@@ -78,5 +61,22 @@
     <footer>
         <p>&copy; 2025 NIRVANA BIKES. All Rights Reserved.</p>
     </footer>
+     <script>
+        function startSlider() {
+            const slider = document.querySelector('.slider');
+            const slides = slider.querySelectorAll('img');
+            let index = 0;
+
+            function showNextSlide() {
+                slides[index].classList.remove('active');
+                index = (index + 1) % slides.length;
+                slides[index].classList.add('active');
+            }
+
+            setInterval(showNextSlide, 2000);
+        }
+
+        window.onload = startSlider;
+    </script>
 </body>
 </html>
